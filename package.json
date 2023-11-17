@@ -1,0 +1,15 @@
+{
+  "name": "javascript-exercises-and-testing",
+  "version": "1.0.0",
+  "description": "![Alt text](bilder/wallhaven-k9x521_1280x720.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
