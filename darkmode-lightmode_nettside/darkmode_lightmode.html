@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DarkMode&Lightmode</title>
+</head>
+<body>
+    <input type="checkbox" id="darkmode"/>
+    <label for="darkmode" onclick="changeMode()"></label>
+    <script>
+        function changeMode(){
+            let changebg = document.body;
+            changebg.classList.toggle('darkmode');
+            console.log('Funksjonen blir kalt!')
+        };
+    </script>
+</body>
+</html>
