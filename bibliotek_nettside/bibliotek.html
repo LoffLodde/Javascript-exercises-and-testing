@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotek</title>
+</head>
+<body>
+    <div id="regForLån">
+        <h2>Utfyllingsskjema for lån av bok</h2>
+        <form id="form">
+            <label for="Navn">Navn</label>
+            <input type="text" autocomplete="off" id="Navn" placeholder="navn" required>
+            <br>
+            <br>
+            <label for="Etternavn">Etternavn</label>
+            <input type="text" id="Etternavn" autocomplete="off" placeholder="etternavn" required>
+            <br>
+            <br>
+            <label for="fra">Fra og med:</label>
+            <input type="date" id="fra" required>
+            &emsp;
+            <label for="til">Til:</label>
+            <input type="date" id="til" required>
+            <br><br><br>
+            <input type="submit" value="Send">
+        </form>
+
+        <script>
+            const form = document.getElementById('form')
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const forNavn = document.getElementById('Navn').value;
+                console.log(forNavn);
+
+                const etterNavn = document.getElementById('Etternavn').value;
+                console.log(etterNavn);
+
+                const datoFra = new Date(document.getElementById('fra').value);
+            let day = datoFra.getDate();
+            let month = datoFra.getMonth() + 1;
+            let year = datoFra.getFullYear();
+            let heleDato = `${day}/${month}/${year}`;
+            console.log(heleDato);
+
+            const datoTil = new Date(document.getElementById('til').value);
+            let day1 = datoTil.getDate();
+            let month1 = datoTil.getMonth() + 1;
+            let year1 = datoTil.getFullYear();
+            let heleDato1 = `${day1}/${month1}/${year1}`;
+            console.log(heleDato1);
+
+            form.reset(); 
+            
+            alert(`${forNavn} ${etterNavn} \nLånedato: fra ${heleDato} - til ${heleDato1}\nTakk for din registrering! Husk å levere innen frist`);
+
+            })
+        </script>
+    </div>
+</body>
+</html>
